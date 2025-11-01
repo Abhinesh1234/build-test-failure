@@ -30,7 +30,7 @@ jobs:
       - name: Notify on failure
         if: failure()
         run: |
-          curl -X POST YOUR_N8N_WEBHOOK_URL_HERE \
+          curl -X https://automation.femi9.in/webhook/build-failure \
             -H "Content-Type: application/json" \
             -d "{
               \"repository\": \"${{ github.repository }}\",
